@@ -3,6 +3,8 @@ body {
     font-family: "Trebuchet MS", Verdana, sans-serif;
     font-size: 16px;
     background-color: dimgrey;
+    border-bottom: 3px solid #cc9900;
+    border-top:: 3px solid #cc9900;
     color: #696969;
     padding: 3px;
 }
