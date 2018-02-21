@@ -20,7 +20,3 @@ body.appendChild(btn3);
 btn.addEventListener ("click", function() {
   location.assign("http://nadineperez.github.io/");
 });
-
-btn2.onclick = function () {
-  btn2.style.color = "green";
-};
