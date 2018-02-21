@@ -2,7 +2,7 @@
 
 // 1. Create the button
 var btn = document.createElement("button");
-btn.innerHTML = "Home";
+btn.innerHTML = "Home2";
 
 var btn2 = document.createElement("button");
 btn2.innerHTML = "Change color";
