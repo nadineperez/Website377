@@ -10,6 +10,6 @@ body.appendChild(button);
 
 // 3. Add event handler
 button.addEventListener ("click", function() {
-  window.location.href = "http://nadineperez.github.io/";
+  location.assign("http://nadineperez.github.io/");
 });
 
