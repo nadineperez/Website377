@@ -1,8 +1,15 @@
 /*adding navigation menu*/
 
-document.getElementById("nav01").innerHTML =
-"<ul id='menu'>" +
-"<li><a href='index.html'>Home</a></li>" +
-"<li><a href='customers.html'>Data</a></li>" +
-"<li><a href='about.html'>About</a></li>" +
-"</ul>";
+// 1. Create the button
+var button = document.createElement("button");
+button.innerHTML = "Do Something";
+
+// 2. Append somewhere
+var body = document.getElementsByTagName("body")[0];
+body.appendChild(button);
+
+// 3. Add event handler
+button.addEventListener ("click", function() {
+  alert("did something");
+});
+
