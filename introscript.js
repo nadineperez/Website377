@@ -1,11 +1,9 @@
-/*adding navigation menu*/
-
 // 1. Create buttons
 var button1 = document.createElement("button");
 button1.innerHTML = "Home";
 
-var button2 = document.createElement("button");
-button1.innerHTML = "Change color";
+//var button2 = document.createElement("button");
+//button1.innerHTML = "Change color";
 
 // 2. Append somewhere
 var body = document.getElementsByTagName("body")[0];
