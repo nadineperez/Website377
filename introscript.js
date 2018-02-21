@@ -21,10 +21,10 @@ btn.addEventListener ("click", function() {
   location.assign("http://nadineperez.github.io/");
 });
 
-btn2.addEventListener ("click", function() {
-  //document.body.style.background = "red";
-  alert("Consider color changed!");
-});
+document.getElementById('color').onclick = changeColor; 
+function changeColor() { 
+  document.body.style.color = "red";
+}
 
 btn3.addEventListener ("click", function() {
   alert("Consider message displayed!");
