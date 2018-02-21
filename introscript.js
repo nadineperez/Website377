@@ -21,7 +21,7 @@ btn.addEventListener ("click", function() {
   location.assign("http://nadineperez.github.io/");
 });
 
-document.getElementById('color').onclick = changeColor; 
+document.getElementById('btn2').onclick = changeColor; 
 function changeColor() { 
   document.body.style.color = "red";
 }
