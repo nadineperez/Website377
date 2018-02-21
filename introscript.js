@@ -1,6 +1,6 @@
 /*adding navigation menu*/
 
-// 1. Create the button
+// 1. Create the buttons
 var btn = document.createElement("button");
 btn.innerHTML = "Home2";
 
@@ -16,7 +16,11 @@ body.appendChild(btn);
 body.appendChild(btn2);
 body.appendChild(btn3);
 
-// 3. Add event handler
+// 3. Add event handlers
 btn.addEventListener ("click", function() {
   location.assign("http://nadineperez.github.io/");
+});
+
+btn3.addEventListener ("click", function() {
+  alert("Consider message displayed!");
 });
