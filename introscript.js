@@ -21,6 +21,6 @@ btn.addEventListener ("click", function() {
   location.assign("http://nadineperez.github.io/");
 });
 
-btn3.addEventListener ("click", function() {
+btn3.addEventListener ("click", function2() {
   alert("Consider message displayed!");
 });
