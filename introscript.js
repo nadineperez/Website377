@@ -22,7 +22,7 @@ btn.addEventListener ("click", function() {
 });
 
 btn2.addEventListener ("click", function() {
-  document.body.style.background = "red";
+  //document.body.style.background = "red";
   alert("Consider color changed!");
 });
 
