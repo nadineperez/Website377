@@ -13,3 +13,5 @@ button.addEventListener ("click", function() {
   location.assign("http://nadineperez.github.io/");
 });
 
+onclick="document.getElementById('button').style.color = 'red'">
+
