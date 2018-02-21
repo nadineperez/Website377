@@ -17,13 +17,5 @@ button1.addEventListener ("click", function() {
   location.assign("http://nadineperez.github.io/");
 });
 
-button1.addEventListener ("click", function() {
-  changeColor();
-});
-
-function changeColor() {
-        document.getElementById('button2').style.color = 'red'
-        return false;
-} 
 
 
