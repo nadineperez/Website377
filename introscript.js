@@ -10,7 +10,9 @@ button2.innerHTML = "Change color";
 // 2. Append somewhere
 var body = document.getElementsByTagName("body")[0];
 body.appendChild(button);
-body.insertBefore(button2);
+
+var body = document.getElementsByTagName("body")[1];
+body.appendChild(button2);
 
 // 3. Add event handler
 button.addEventListener ("click", function() {
