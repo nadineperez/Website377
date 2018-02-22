@@ -4,6 +4,7 @@ var song_3 = {name:"Sitting, Waiting, Wishing", artist:"Jack Johnson", album:"In
 var song_4 = {name:"Pillow Talking (feat. Brain)", artist:"Lil Dicky", album:"Professional Rapper"};
 var song_5 = {name:"Scar Tissue", artist:"Red Hot Chili Peppers", album:"Californication"};
 
+var body = document.getElementsByTagName("body")[0];
 body.appendChild(song_1.name);
 
 /*
