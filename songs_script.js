@@ -4,8 +4,11 @@ var song_3 = {name:"Sitting, Waiting, Wishing", artist:"Jack Johnson", album:"In
 var song_4 = {name:"Pillow Talking (feat. Brain)", artist:"Lil Dicky", album:"Professional Rapper"};
 var song_5 = {name:"Scar Tissue", artist:"Red Hot Chili Peppers", album:"Californication"};
 
-var body = document.getElementsByTagName("body")[0];
-body.appendChild(song_1.name);
+var table = document.getElementById("myTable");
+    var header = table.createTHead();
+    var row = header.insertRow(0);
+    var cell = row.insertCell(0);
+    cell.innerHTML = "<b>This is a table header</b>";
 
 /*
 var songs = [song_1, song_2, song_3, song_4, song_5];
