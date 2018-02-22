@@ -5,7 +5,8 @@ var song_4 = {name:"Pillow Talking (feat. Brain)", artist:"Lil Dicky", album:"Pr
 var song_5 = {name:"Scar Tissue", artist:"Red Hot Chili Peppers", album:"Californication"};
 
 var tableRef = document.getElementById('myTable').getElementsByTagName('tbody')[0];
-var row = tableRef.insertRow(tableRef.rows.length);
+//var row = tableRef.insertRow(tableRef.rows.length);
+var row = tableRef.insertRow(0);
 var cell = row.insertCell(0);
 cell.innerHTML = "<b>This is a table header</b>";
 
