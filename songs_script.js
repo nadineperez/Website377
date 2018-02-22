@@ -14,7 +14,7 @@ var body = document.getElementsByTagName("body")[0];
     var row = document.createElement("tr");
     for (var j = 0; j < 3; j++) {
       var cell = document.createElement("td");
-      var cellText = songs[song_1].name;
+      var cellText = songs[i].name;
       cell.appendChild(cellText);
       row.appendChild(cell);
     }
