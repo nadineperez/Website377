@@ -14,47 +14,104 @@
     <a class="active" href="songs.html">Top 5 Songs</a>
   </div>
  </div>
-  
+
 <body>
-  
-<table id="myTable" align = "left">
+
+<table cellpadding = "2" cellspacing = "2" border = "1" bgcolor = "#dfdfdf" width = "40%" align = "left">
   <thead>
     <tr>
-	    <th>Name</th><th>Song name</th><th>Artist</th><th>Album</th></tr>
+	    <th>Song name</th>
+       <th>Artist</th>
+       <th>Album</th>
+       <th>Length</th>
+    </tr>
   </thead>
   <tbody id = "data"></tbody>
 </table>
 
-<table align = "right">
+<table cellpadding = "2" cellspacing = "2" border = "1" bgcolor = "#dfdfdf" width = "40%" align = "right">
 	<thead>
 		<tr>
 			<th># Songs</th>
 			<th># Artists</th>
 			<th># Albums</th>
+         <th>Total Length</th>
 		</tr>
 	</thead>
 	<tbody id = "statsdata"></tbody>
 </table>
-	
+
 <script>
 	var songs = [
-	  {song_name:"Good People", artist:"Jack Johnson", album:"In Between Dreams"},
-	  {song_name:"Super Rich Kids (feat. Early Sweatshirt)", artist:"Frank Ocean", album:"channel ORANGE"},
-	  {song_name:"Sitting, Waiting, Wishing", artist:"Jack Johnson", album:"In Between Dreams"},
-	  {song_name:"Pillow Talking (feat. Brain)", artist:"Lil Dicky", album:"Professional Rapper"},
-	  {song_name:"Scar Tissue", artist:"Red Hot Chili Peppers", album:"Californication"}
+	  {song_name: "Good People", artist: "Jack Johnson", album: "In Between Dreams", length: "2308"},
+	  {song_name: "Super Rich Kids (feat. Early Sweatshirt)", artist: "Frank Ocean", album: "channel ORANGE", length: "3085"},
+	  {song_name: "Sitting, Waiting, Wishing", artist:"Jack Johnson", album:"In Between Dreams", length: "3902"},
+	  {song_name: "Pillow Talking (feat. Brain)", artist:"Lil Dicky", album:"Professional Rapper", length: "2069"},
+	  {song_name: "Scar Tissue", artist:"Red Hot Chili Peppers", album:"Californication", length: "2964"}
 	];
-
+   
 	var table = '<tbody>'
 	for (i = 0; i <songs.length; i++) {
 		table += '<tr>';
 		table += '<td>' + songs[i].song_name + '</td>';
 		table += '<td>' + songs[i].artist + '</td>';
 		table += '<td>' + songs[i].album + '</td>';
-		music += '</tr>';
+      table += '<td>' + songs[i].length + '</td>';
+		table += '</tr>';
 	}
 	table += '</tbody>';
-	document.getElementById('data').innerHTML = music;
+	document.getElementById('data').innerHTML = table;
+
+   function totalLength() {
+      var totalLength = 0;
+      for (i = 0; i < songs.length; i++) {
+         totalLength += Number(songs[i].length);
+      }
+      return Number(totalLength);
+   }
+
+   function totalArtists() {
+      var counter = 0
+      var arr = []
+      for (i = 0; i < songs.length; i++){
+         if (arr.includes(songs[i].Artist) == false){
+            counter += 1
+         }
+      }
+      return counter;
+   }
+
+   function totalAlbums() {
+      var counter = 0
+      var arr = []
+      for (i = 0; i < songs.length; i++){
+         if (arr.includes(songs[i].Album) == false){
+            counter += 1
+         }
+      }
+      return counter;
+   }
+
+   function totalSongs() {
+      return songs.length;
+   }
+
+   var statistics = [
+      {TotalLength: totalLength(), TotalArtists: totalArtists(), TotalSongs: totalSongs(), TotalAlbums: totalAlbums()}
+   ];
+
+   var statsTable = '<tbody>'
+   for (i = 0; i < statistics.length; i++) {
+      statsTable += '<tr>';
+      statsTable += '<td>' + statistics[i].TotalSongs + '</td>';
+      statsTable += '<td>' + statistics[i].TotalArtists + '</td>';
+      statsTable += '<td>' + statistics[i].TotalAlbums + '</td>';
+      statsTable += '<td>' + statistics[i].TotalLength + '</td>';
+      statsTable += '</tr>';
+   }
+   statsTable += '</tbody>';
+   document.getElementById('statsdata').innerHTML = statsTable;
+
 </script>
 
 </body>
