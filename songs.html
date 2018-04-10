@@ -44,11 +44,11 @@
 	  {name:"Scar Tissue", artist:"Red Hot Chili Peppers", album:"Californication"}];
 
 	var table = '<tbody>'
-	for (var song in songs[0]) {
+	for (i = 0; i <songs.length; i++) {
 		table += '<tr>';
-		table += '<td>' + song.name + '</td>';
-		table += '<td>' + song.artist + '</td>';
-		table += '<td>' + song.album + '</td>';
+		table += '<td>' + songs[i].name + '</td>';
+		table += '<td>' + songs[i].artist + '</td>';
+		table += '<td>' + songs[i].album + '</td>';
 	}
 	table += '</tbody>';
 	document.getElementById('data').innerHTML = music;
