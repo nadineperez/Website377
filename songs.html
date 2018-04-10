@@ -37,17 +37,18 @@
 </table>
 	
 <script>
-	var songs = [{name:"Good People", artist:"Jack Johnson", album:"In Between Dreams"},
-	  {name:"Super Rich Kids (feat. Early Sweatshirt)", artist:"Frank Ocean", album:"channel ORANGE"},
-	  {name:"Sitting, Waiting, Wishing", artist:"Jack Johnson", album:"In Between Dreams"},
-	  {name:"Pillow Talking (feat. Brain)", artist:"Lil Dicky", album:"Professional Rapper"},
-	  {name:"Scar Tissue", artist:"Red Hot Chili Peppers", album:"Californication"}
+	var songs = [
+	  {song_name:"Good People", artist:"Jack Johnson", album:"In Between Dreams"},
+	  {song_name:"Super Rich Kids (feat. Early Sweatshirt)", artist:"Frank Ocean", album:"channel ORANGE"},
+	  {song_name:"Sitting, Waiting, Wishing", artist:"Jack Johnson", album:"In Between Dreams"},
+	  {song_name:"Pillow Talking (feat. Brain)", artist:"Lil Dicky", album:"Professional Rapper"},
+	  {song_name:"Scar Tissue", artist:"Red Hot Chili Peppers", album:"Californication"}
 	];
 
 	var table = '<tbody>'
 	for (i = 0; i <songs.length; i++) {
 		table += '<tr>';
-		table += '<td>' + songs[i].name + '</td>';
+		table += '<td>' + songs[i].song_name + '</td>';
 		table += '<td>' + songs[i].artist + '</td>';
 		table += '<td>' + songs[i].album + '</td>';
 		music += '</tr>';
