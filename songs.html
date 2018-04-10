@@ -17,51 +17,42 @@
   
 <body>
   
-<table id="myTable">
+<table id="myTable" align = "left">
   <thead>
-    <tr><th>Name</th><th>Song name</th><th>Artist</th><th>Album</th></tr>
+    <tr>
+	    <th>Name</th><th>Song name</th><th>Artist</th><th>Album</th></tr>
   </thead>
-  <tbody>
-				
-  </tbody>
- </table>
-  
-<!--
-<table style="width:100%">
-  <tr>
-    <th>Song name</th>
-    <th>Artist</th> 
-    <th>Album</th>
-  </tr>
-  <tr>
-    <td>Good People</td>
-    <td>Jack Johnson</td> 
-    <td>In Between Dreams</td>
-  </tr>
-  <tr>
-    <td>Super Rich Kids (feat. Early Sweatshirt)</td>
-    <td>Frank Ocean</td> 
-    <td>channel ORANGE</td>
-  </tr>
-  <tr>
-    <td>Sitting, Waiting, Wishing</td>
-    <td>Jack Johnson</td> 
-    <td>In Between Dreams</td>
-  </tr>
-  <tr>
-    <td>Pillow Talking (feat. Brain)</td>
-    <td>Lil Dicky</td> 
-    <td>Professional Rapper</td>
-  </tr>
-  <tr>
-    <td>Scar Tissue</td>
-    <td>Red Hot Chili Peppers</td> 
-    <td>Californication</td>
-  </tr>
+  <tbody id = "data"></tbody>
 </table>
--->
-  
-<script src="songs_script.js"></script>
+
+<table align = "right">
+	<thead>
+		<tr>
+			<th># Songs</th>
+			<th># Artists</th>
+			<th># Albums</th>
+		</tr>
+	</thead>
+	<tbody id = "statsdata"></tbody>
+</table>
+	
+<script>
+	var songs = [{name:"Good People", artist:"Jack Johnson", album:"In Between Dreams"}
+	  {name:"Super Rich Kids (feat. Early Sweatshirt)", artist:"Frank Ocean", album:"channel ORANGE"}
+	  {name:"Sitting, Waiting, Wishing", artist:"Jack Johnson", album:"In Between Dreams"}
+	  {name:"Pillow Talking (feat. Brain)", artist:"Lil Dicky", album:"Professional Rapper"}
+	  {name:"Scar Tissue", artist:"Red Hot Chili Peppers", album:"Californication"}];
+
+	var table = '<tbody>'
+	for (var song in songs[0]) {
+		tables += '<tr>';
+		table += '<td>' + song.name + '</td>';
+		table += '<td>' + song.artist + '</td>';
+		table += '<td>' + song.album + '</td>';
+	}
+	table += '</tbody>';
+	document.getElementById('data').innerHTML = music;
+</script>
 
 </body>
 </html>
